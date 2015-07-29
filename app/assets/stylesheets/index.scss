@@ -1,0 +1,39 @@
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.
+@import "susy";
+
+$susy:(
+columns: 12,
+global-box-sizing:border-box,
+debug: (image: show)
+);
+@include border-box-sizing;
+
+body{
+ background: url(/assets/6H.png) no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+.content{
+position:relative;
+text-align:center;
+}
+.form{
+top:50%;
+left:40%;
+position:fixed;
+}
+
+.search{ 
+border:5px solid #fff;
+padding:20px 50px 20px 25px;
+width: 150%;
+outline:#fff;
+}
+::-webkit-input-placeholder {
+   height: 100%;
+}
