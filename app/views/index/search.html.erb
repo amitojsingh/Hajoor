@@ -1,7 +1,7 @@
+<h1>Index#search</h1>
 <div class=content>
-<%= form_for(:user) do |form| %>
 <p> 
-<%= form.text_field :search, :placeholder => 'Write here'%> 
-</P>
+<%= form_tag("show",:method=>"get",:id=>"search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: 'Write here'%> 
+<%= submit_tag "search"%>
 <% end %>
-</div>

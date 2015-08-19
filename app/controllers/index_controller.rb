@@ -1,5 +1,8 @@
 class IndexController < ApplicationController
   def search
-@gurbani=Gurbani.where("translation=?", params[:search])
+  end
+
+  def show
+@results= Jap.search(params[:search])
   end
 end
