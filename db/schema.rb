@@ -11,13 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150729190703) do
+ActiveRecord::Schema.define(version: 20150820144214) do
 
-  create_table "jap", id: false, force: :cascade do |t|
+  create_table "JapJiSahib", id: false, force: :cascade do |t|
     t.integer "Id",              limit: 4,     null: false
     t.text    "Sentence",        limit: 65535, null: false
     t.text    "Translation",     limit: 65535, null: false
     t.text    "Transliteration", limit: 65535, null: false
+  end
+
+  create_table "japs", id: false, force: :cascade do |t|
+    t.integer "Id",              limit: 4,     null: false
+    t.text    "Sentence",        limit: 65535, null: false
+    t.text    "Translation",     limit: 65535, null: false
+    t.text    "Transliteration", limit: 65535, null: false
+  end
+
+  create_table "reg_words", force: :cascade do |t|
+    t.string   "words",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end
